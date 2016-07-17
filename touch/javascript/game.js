@@ -38,7 +38,7 @@ function runtime(){
 	id = setTimeout(runtime, 1);
 	var index = time.toString().indexOf(".");
 	var length = index + 4;
-	$('#time').text(time.toString().substr(0,length)+ "Ãë");
+	$('#time').text(time.toString().substr(0,length)+ "ç§’");
 }
 function cleartext(){
 	$("#black-box-3-0").text("");
@@ -75,26 +75,26 @@ function cleartext(){
 //	}
 //}
 function movedown(){
-    //±éÀú12¸öºÚ¿é,µ¹Ğò±éÀú
+    //éå†12ä¸ªé»‘å—,å€’åºéå†
     for(var i=3;i>=0;i--){
         for(var j=2;j>=0;j--){
             if(board[i][j] == 1){
                 if(i==3){
-                    //½«µ±Ç°µÄºÚ¿éµÄÑÕÉ«¸Ä±ä³É°×É«
+                    //å°†å½“å‰çš„é»‘å—çš„é¢œè‰²æ”¹å˜æˆç™½è‰²
                     $("#black-box-" + i + "-" + j).css("background-color","#fff");
                     board[i][j] = 0;
                 }else{
-                    //½«µ±Ç°µÄºÚ¿éµÄÑÕÉ«¸Ä±ä³É°×É«
+                    //å°†å½“å‰çš„é»‘å—çš„é¢œè‰²æ”¹å˜æˆç™½è‰²
                     $("#black-box-" + i + "-" + j).css("background-color","#fff");
                     board[i][j] = 0;
-                    //½«µ±Ç°µÄºÚ¿éÏÂÒ»ĞĞÍ¬Ò»ÁĞµÄºÚ¿éÑÕÉ«¸Ä±ä³ÉºÚÉ«
+                    //å°†å½“å‰çš„é»‘å—ä¸‹ä¸€è¡ŒåŒä¸€åˆ—çš„é»‘å—é¢œè‰²æ”¹å˜æˆé»‘è‰²
                     $("#black-box-" + (i + 1) + "-" + j).css("background-color","#000");
                     board[i+1][j] = 1;
                 }
             }
         }
     }
-    //µÚÒ»ĞĞÖØĞÂËæ»úÒ»¸öºÚ¿éµÄÎ»ÖÃ
+    //ç¬¬ä¸€è¡Œé‡æ–°éšæœºä¸€ä¸ªé»‘å—çš„ä½ç½®
     var randy = parseInt(Math.floor(Math.random() * 3));
     var block = $("#black-box-" + 0 + "-" + randy);
 	while(board[1][randy]==1 && board[2][randy]==1 && board[3][randy]==1){
@@ -109,12 +109,12 @@ function gameover(){
 	clearTimeout(id);
 	var index = time.toString().indexOf(".");
 	var length = index + 4;
-	$('#container').append($("<div id = 'gameover'><p>±¾´ÎÓÃÊ±</p><span id = 'overtime'>"+ time.toString().substr(0,length) + "Ãë</span><a href='javascript:restartgame();' id = 'restart'>Restart</a></div>"));
+	$('#container').append($("<div id = 'gameover'><p>æœ¬æ¬¡ç”¨æ—¶</p><span id = 'overtime'>"+ time.toString().substr(0,length) + "ç§’</span><a href='javascript:restartgame();' id = 'restart'>Restart</a></div>"));
 	$('#gameover').css("background-color","rgba(0,0,0,0.3)");
 }
 function restartgame(){
 	$("#gameover").remove();
-	$('#time').html("<span>0.000Ãë</span>");
+	$('#time').html("<span>0.000ç§’</span>");
 	$('.black-box').remove();
 	score = 0;
 	init();

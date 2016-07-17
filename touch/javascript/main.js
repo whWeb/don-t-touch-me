@@ -27,9 +27,9 @@ function init(){
 		blackBox.css("background-color", "#000");
 		board[i][randy] = 1; 
 	}
-	 $("#black-box-3-0").text("°´J¿ªÊ¼");
-	 $("#black-box-3-1").text("°´K¿ªÊ¼");
-	 $("#black-box-3-2").text("°´L¿ªÊ¼");
+	 $("#black-box-3-0").text("æŒ‰Jå¼€å§‹");
+	 $("#black-box-3-1").text("æŒ‰Kå¼€å§‹");
+	 $("#black-box-3-2").text("æŒ‰Lå¼€å§‹");
 }
 
 function getTop(y){
